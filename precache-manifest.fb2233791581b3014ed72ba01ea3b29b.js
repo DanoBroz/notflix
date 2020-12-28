@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebc4ddb9fa397011641dfb6b022a7470",
+    "revision": "3712493457de7cc3a65813c1295d0be0",
     "url": "/notflix/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/notflix/static/js/2.6a38f3d2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e2324b2517086b253e1",
-    "url": "/notflix/static/js/main.d76930db.chunk.js"
+    "revision": "b660615a3e227fad1521",
+    "url": "/notflix/static/js/main.f0664f4e.chunk.js"
   },
   {
     "revision": "398eef7ed9c6ccce02c6",
