@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, createContext } from 'react';
+import ReactDOM from 'react-dom';
 import { Link as ReachRouterLink } from 'react-router-dom';
 import {
   Group,
@@ -17,10 +18,21 @@ import {
   Picture,
   Dropdown,
   Profile,
+  Inner,
+  Close,
+  Overlay,
 } from './styles/header'
 
+const HeaderContext = createContext()
+
 export default function Header({bg = true, children, ...restProps}) {
-  return bg ? <Background {...restProps}>{children}</Background> : children;
+  const [showPlayer, setShowPlayer] = useState(false);
+
+  return (
+    <HeaderContext.Provider value={{showPlayer, setShowPlayer}}>
+      {bg ? <Background {...restProps}>{children}</Background> : children}
+    </HeaderContext.Provider>
+  );
 }
 
 Header.Frame = function HeaderFrame({children, ...restProps}) {
@@ -77,8 +89,34 @@ Header.FeatureCallOut = function HeaderFeatureCallOut({children, ...restProps}) 
   return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
 }
 
-Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
-  return <PlayButton {...restProps}>{children}</PlayButton>
+Header.Video = function HeaderVideo({ ...restProps }) {
+  const {showPlayer, setShowPlayer} = useContext(HeaderContext);
+
+  return showPlayer ?
+    ReactDOM.createPortal(
+      <Overlay onClick={() => setShowPlayer(false)}>
+        <Inner>
+          <video {...restProps} id="notflix-player" controls autoPlay>
+            <source
+              src={`/videos/joker.mp4`}
+              type={`video/mp4`}
+            />
+          </video>
+          <Close onClick={() => setShowPlayer(false)} />
+        </Inner>
+      </Overlay>,
+      document.body
+    ): null;
+}
+
+Header.PlayButton = function HeaderPlayButton({ ...restProps }) {
+  const {showPlayer, setShowPlayer} = useContext(HeaderContext);
+
+  return (
+    <PlayButton onClick={() => setShowPlayer(!showPlayer)} {...restProps}>
+      Play
+    </PlayButton>
+  )
 }
 
 Header.Picture = function HeaderPicture({src, ...restProps}) {

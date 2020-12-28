@@ -105,22 +105,29 @@ export const FeatureCallOut = styled.h2`
 `;
 
 export const PlayButton = styled.button`
-  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
-  background-color: #e6e6e6;
-  color: #000;
-  border-width: 0;
-  padding: 10px 20px;
+  padding: 10px;
+  background-color: white;
   border-radius: 5px;
-  max-width: 130px;
+  border-width: 0;
+  width: 115px;
+  height: 45px;
+  text-transform: uppercase;
   font-weight: bold;
-  font-size: 20px;
-  margin-top: 10px;
+  color: #000;
+  font-size: 18px;
+  height: 45px;
   cursor: pointer;
-  transition: background-color: 0.5s ease;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
   &:hover {
-    background: #ff1e1e;
-    color: white;
+    background: #e6e6e6;
+    opacity: 0.75;
+  }
+  img {
+    filter: brightness(0);
+    width: 28px;
   }
 `;
 
@@ -215,5 +222,61 @@ export const Profile = styled.div`
   &:hover > ${Dropdown} {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+export const Overlay = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 20px;
+`;
+
+export const Close = styled.button`
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 22px;
+  height: 22px;
+  opacity: 1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background: #fff;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+`;
+
+export const Inner = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+
+  video {
+    height: 100%;
+    width: 100%;
   }
 `;
