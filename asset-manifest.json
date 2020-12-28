@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/notflix/static/js/main.ad54b484.chunk.js",
-    "main.js.map": "/notflix/static/js/main.ad54b484.chunk.js.map",
+    "main.js": "/notflix/static/js/main.d46729a4.chunk.js",
+    "main.js.map": "/notflix/static/js/main.d46729a4.chunk.js.map",
     "runtime-main.js": "/notflix/static/js/runtime-main.bbf010ab.js",
     "runtime-main.js.map": "/notflix/static/js/runtime-main.bbf010ab.js.map",
     "static/css/2.764ccc25.chunk.css": "/notflix/static/css/2.764ccc25.chunk.css",
     "static/js/2.6a38f3d2.chunk.js": "/notflix/static/js/2.6a38f3d2.chunk.js",
     "static/js/2.6a38f3d2.chunk.js.map": "/notflix/static/js/2.6a38f3d2.chunk.js.map",
     "index.html": "/notflix/index.html",
-    "precache-manifest.6e24f0f2160875c91561b9ba4697cf9b.js": "/notflix/precache-manifest.6e24f0f2160875c91561b9ba4697cf9b.js",
+    "precache-manifest.f0f3f43027d69b1da21c99fd635ee71f.js": "/notflix/precache-manifest.f0f3f43027d69b1da21c99fd635ee71f.js",
     "service-worker.js": "/notflix/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/notflix/static/css/2.764ccc25.chunk.css.map",
     "static/js/2.6a38f3d2.chunk.js.LICENSE.txt": "/notflix/static/js/2.6a38f3d2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bbf010ab.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.6a38f3d2.chunk.js",
-    "static/js/main.ad54b484.chunk.js"
+    "static/js/main.d46729a4.chunk.js"
   ]
 }
