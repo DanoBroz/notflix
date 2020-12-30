@@ -23,6 +23,8 @@ import {
   Overlay,
 } from './styles/header'
 
+const imagePath = process.env.PUBLIC_URL + '/notflix/images/';
+
 const HeaderContext = createContext()
 
 export default function Header({bg = true, children, ...restProps}) {
@@ -45,7 +47,7 @@ Header.Search = function HeaderSearch({searchTerm, setSearchTerm, ...restProps})
   return (
     <Search {...restProps}>
       <SearchIcon onClick={() => setSearchActive(!searchActive)}>
-        <img src="/images/icons/search.png" alt="Search" />
+        <img src={`/notflix/images/icons/search.png`} alt="Search" />
       </SearchIcon>
       <SearchInput
         value={searchTerm}
@@ -98,7 +100,7 @@ Header.Video = function HeaderVideo({ ...restProps }) {
         <Inner>
           <video {...restProps} id="notflix-player" controls autoPlay>
             <source
-              src={`/videos/joker.mp4`}
+              src={`/notflix/videos/joker.mp4`}
               type={`video/mp4`}
             />
           </video>
@@ -120,7 +122,7 @@ Header.PlayButton = function HeaderPlayButton({ ...restProps }) {
 }
 
 Header.Picture = function HeaderPicture({src, ...restProps}) {
-  return <Picture src={`/images/users/${src}.png`} {...restProps} />
+  return <Picture src={`/notflix/images/users/${src}.png`} {...restProps} />
 }
 
 Header.Dropdown = function HeaderDropdown({children, ...restProps}) {
