@@ -45,7 +45,7 @@ Header.Search = function HeaderSearch({searchTerm, setSearchTerm, ...restProps})
   return (
     <Search {...restProps}>
       <SearchIcon onClick={() => setSearchActive(!searchActive)}>
-        <img src={`/notflix/images/icons/search.png`} alt="Search" />
+        <img src={process.env.PUBLIC_URL + `/images/icons/search.png`} alt="Search" />
       </SearchIcon>
       <SearchInput
         value={searchTerm}
@@ -98,7 +98,7 @@ Header.Video = function HeaderVideo({ ...restProps }) {
         <Inner>
           <video {...restProps} id="notflix-player" controls autoPlay>
             <source
-              src={`/notflix/videos/joker.mp4`}
+              src={process.env.PUBLIC_URL + `/videos/joker.mp4`}
               type={`video/mp4`}
             />
           </video>
@@ -120,7 +120,7 @@ Header.PlayButton = function HeaderPlayButton({ ...restProps }) {
 }
 
 Header.Picture = function HeaderPicture({src, ...restProps}) {
-  return <Picture src={`/notflix/images/users/${src}.png`} {...restProps} />
+  return <Picture src={process.env.PUBLIC_URL + `/images/users/${src}.png`} {...restProps} />
 }
 
 Header.Dropdown = function HeaderDropdown({children, ...restProps}) {

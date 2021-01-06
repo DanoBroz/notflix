@@ -22,7 +22,7 @@ Player.Video = function PlayerVideo({ ...restProps }) {
     <Overlay {...restProps} onClick={() => setShowPlayer(false)}>
       <Inner>
         <video id="notflix-player" controls autoPlay>
-          <source src="/notflix/videos/the-social-network.mp4" type="video/mp4" />
+          <source src={process.env.PUBLIC_URL + `/videos/the-social-network.mp4`} type="video/mp4" />
         </video>
         <Close />
       </Inner>
