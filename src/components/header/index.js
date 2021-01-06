@@ -23,8 +23,6 @@ import {
   Overlay,
 } from './styles/header'
 
-const imagePath = process.env.PUBLIC_URL + '/notflix/images/';
-
 const HeaderContext = createContext()
 
 export default function Header({bg = true, children, ...restProps}) {
