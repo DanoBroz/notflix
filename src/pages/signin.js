@@ -5,7 +5,6 @@ import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
 import * as ROUTES from '../constants/routes';
-const imagePath = process.env.PUBLIC_URL + '/notflix/images/';
 
 export default function Signin() {
   const [error, setError] = useState('');
